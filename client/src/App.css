@@ -1,0 +1,26 @@
+body{
+  background-color: lightblue;
+}
+
+.analysis-header {
+  background-image: url(../public/food-banner.png);
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  min-height: 300px;
+  opacity: 0.8;
+  }
+
+.recipe-header h2{
+  background: url(../public/pexels-jane-doan-1099680.jpg);
+  background-size:cover;
+  background-position: center;
+  padding: 10%;
+  font-size: 1cm;
+  text-align: center;
+  color: white;
+  -webkit-text-stroke: 1px black;
+  font-weight: 500;
+  
+}

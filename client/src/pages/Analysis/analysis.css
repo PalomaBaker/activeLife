@@ -1,0 +1,55 @@
+
+.analysis-form {
+margin: auto;
+margin-top: 50px;
+position: relative;
+left: 800px;
+}
+
+.intro {
+font-size: 150%;
+text-align: center;
+padding: 18px;
+text-align: center;
+min-width: max-content;
+max-width: fit-content;
+max-height: 20px;
+display: flex;
+background-color: whitesmoke;
+opacity: 0.9;
+color: black;
+align-items: center;
+margin-left: 25%;
+position: relative;
+}
+
+
+.card {
+margin: auto;
+margin-top: 15px;
+padding: 5px;
+border-style:double;
+border-width: 4px;
+max-width: fit-content;
+display: flex;
+line-height: 1.6em;
+font-size: 85%;
+text-align: left;
+}
+
+.searchBar {
+font-size: 70%;
+}
+
+@media (max-width: 860px){
+    header .navigation{
+        display: none;
+    }
+    .intro {
+        font-size: 110%;
+        margin-left: 25%;
+    }
+    body {
+        font-size: 120%;
+    }
+}
