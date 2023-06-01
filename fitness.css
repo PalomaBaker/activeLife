@@ -3,7 +3,7 @@ body, html {
     font-family: sans-serif;
 }
 
-/*image background*/
+/* Image background */
 .bg {
     background-image: url(./assets/fitness\ backgrounf.jpeg);
     height: 100%;
@@ -14,7 +14,7 @@ body, html {
   
 
 
-/* hamburger and nav */
+/* Hamburger and nav */
 *,
 *::after,
 *::before {
@@ -25,9 +25,9 @@ body, html {
     --bar-width: 40px;
     --bar-height: 6px;
     --hamburger-gap: 5px;
-    --foreground: #333;
-    --background: black;
-    --hamburger-margin: 8px;
+    --foreground: #70beef;
+    --background: transparent;
+    --hamburger-margin: 20px;
     --animation-timing: 200ms ease-in-out;
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
 }
@@ -104,16 +104,32 @@ a:active {
 }
 
 
+/* Page introduction */
+
 .title {
     color: rgb(81, 187, 237);
+    margin-top: 0;
     position: absolute;
     right: 25px;
-    font-size: 35px;
+    font-size: 2.5rem;
+    background: linear-gradient(to right, rgba(255, 215, 255, 0) 0%, rgba(225, 255, 255, 0.5) 20%, rgba(255, 255, 255, 0) 61%), linear-gradient(rgb(97, 183, 217) 52%, rgb(224, 246, 255) 60%, rgb(78, 99, 132) 61%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: wave 2000ms ease alternate infinite;
+    transition: all 0.4s ease;
 }
 
-
-/* Page introduction */
 .intro {
+    text-align: center;
+    font-size: 3vw;
+    font-family: sans-serif;
+    color: aliceblue;
+    text-shadow: 0px 0px 5px #70b0ef, 0px 0px 10px #70b0ef, 0px 0px 10px #70b0ef;
+    
+}
+
+.subtitle {
     text-align: center;
     font-size: 3vw;
     font-family: sans-serif;
@@ -134,13 +150,84 @@ a:active {
     }
 }
 
+
+/* Explore button */
+
 .start {
     text-align: center;
     font-size: 3vw;
-    color: rgb(224, 246, 255);
+    color: rgb(155, 206, 226);
     font-family: sans-serif;
 }
 
 button {
     cursor: pointer;
+    font-size: 1.5rem;
+}
+
+button:hover {
+    color: #70b0efx;
+}
+
+
+/* CSS */
+.button-19 {
+  appearance: button;
+  background-color: #1899D6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 1px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: flex;
+  font-family: din-round,sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: auto;
+  outline: none;
+  overflow: visible;
+  padding: 8px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 100%;
+  max-width: fit-content;
+}
+
+.button-19:after {
+  background-clip: padding-box;
+  background-color: #1CB0F6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.button-19:main,
+.button-19:focus {
+  user-select: auto;
+}
+
+.button-19:hover:not(:disabled) {
+  filter: brightness(1.5);
+  -webkit-filter: brightness(1.2);
+}
+
+.button-19:disabled {
+  cursor: auto;
 }
