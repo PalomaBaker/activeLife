@@ -3,6 +3,7 @@ import './exercise.css';
 import ExerciseForm from "../../components/ExerciseForm";
 
 const Exercises = () => {
+    const handleForm = () => {
     const form = document.querySelector('form');
     const input1 = document.querySelector('#input1');
     const workoutDiv = document.getElementById("output");
@@ -70,7 +71,7 @@ const Exercises = () => {
 
 
         })
-    )
+    )}
 }
 
 
