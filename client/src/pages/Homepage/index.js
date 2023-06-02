@@ -5,31 +5,31 @@ import './homepage.css';
 const Homepage = () => {
     return (
         <React.Fragment>
-            <div class="container">
-                <div class="box">
-                    <div class="content">
-                        <div class="title">Calorie Tracker </div>
+            <div className="container">
+                <div className="box">
+                    <div className="content">
+                        <div className="title">Calorie Tracker </div>
                             Generate the daily amount of calories your body needs!
-                            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded page-btn" id="calorie-tracker">
+                            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded page-btn" id="calorie-tracker">
                                 Calorie Tracker
                             </button>
                     </div>
                 </div>
-                <div class="box">
-                    <div class="content">
-                        <div class="title">Nutrition Analysis</div>
+                <div className="box">
+                    <div className="content">
+                        <div className="title">Nutrition Analysis</div>
                             Get the nutritional data of your food based on the measurmeants of single ingredients 
-                            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded page-btn" id="nutrition-analysis">
+                            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded page-btn" id="nutrition-analysis">
                                 Nutrition Analysis
                             </button>
 
                     </div>
                 </div>
-                <div class="box">
-                    <div class="content">
-                        <div class="title">Recipe Generator</div>
+                <div className="box">
+                    <div className="content">
+                        <div className="title">Recipe Generator</div>
                             Access recipes based on your goals and preferences 
-                            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded page-btn" id="recipes">
+                            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded page-btn" id="recipes">
                                 Recipes
                             </button>
                     </div>

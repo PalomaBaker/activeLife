@@ -49,18 +49,18 @@ const Recipes = () => {
                 <header className="recipe-header">
                     <h2> Search Through Our Reciepe Database!</h2>
                 </header>
-                <div class="w-full max-w-xs flex form-card">
+                <div className="w-full max-w-xs flex form-card">
                     <RecipeForm onSave={handleForm}/>
                 </div>
         
-                <div class="recipe-container" id="output">
+                <div className="recipe-container" id="output">
                     {formData.map((data) =>{
                         return (
-                            <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
-                                <img class="w-full" src={data.image} alt="Food_image" />
-                                <div class="px-6 py-4">
-                                    <div class="font-bold text-xl mb-2">{data.title}</div>
-                                    <p class="text-gray-700 text-base">
+                            <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                                <img className="w-full" src={data.image} alt="Food_image" />
+                                <div className="px-6 py-4">
+                                    <div className="font-bold text-xl mb-2">{data.title}</div>
+                                    <p className="text-gray-700 text-base">
                                     Amount: {data.nutrition.nutrients[0].amount}
                                     </p>
                                 </div>
