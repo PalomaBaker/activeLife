@@ -31,7 +31,8 @@ const ExerciseForm = ({ onSave, user = {}}) => {
          <button className="submit">Submit</button>
         
      </form>
-     
+     <div className="workout-container flex flex-wrap space-x-10 space-y-10 place-content-center" id="output">
+        </div>
      </div>
      
   
