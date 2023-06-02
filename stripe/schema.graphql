@@ -1,0 +1,7 @@
+type PaymentIntent {
+  clientSecret: String!
+}
+
+type Mutation {
+  createPaymentIntent: PaymentIntent!
+}
