@@ -4,4 +4,5 @@ type PaymentIntent {
 
 type Mutation {
   createPaymentIntent: PaymentIntent!
+  removeRecipe(recipeId: ID!): User
 }
