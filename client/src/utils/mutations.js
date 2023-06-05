@@ -25,11 +25,39 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_RECIPE = gql`
-mutation addRecipe() {
-    addRecipe() {
-        
+mutation addRecipe($recipeData: RecipeInput!) {
+    addRecipe(recipeData: $recipeData) {
+      _id
+      username
+      email
+      savedRecipe {
+        name
+        calorieCount
+        recipeImage
+        recipeDescription
+        recipeId
+      }
 
     }
 }
 
-`
+`;
+
+export const REMOVE_RECIPE = gql`
+mutation removeRecipe($recipeData: RecipeInput!) {
+    removeRecipe(recipeData: $recipeData) {
+      _id
+      username
+      email
+      savedRecipe {
+        name
+        calorieCount
+        recipeImage
+        recipeDescription
+        recipeId
+      }
+
+    }
+}
+
+`;

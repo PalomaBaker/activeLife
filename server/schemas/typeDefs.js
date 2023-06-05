@@ -23,10 +23,19 @@ type User {
         paymentId: ID!
       }
 
+      input RecipeInput {
+        name: String! 
+        calorieCount: Int! 
+        recipeImage: String!
+        recipeDescription: [String]!
+        recipeId: ID!
+      }
+
       type Mutation {
         login(email: String!, password: String!): Auth
         addUser(username: String!, email: String!, password: String!): Auth
         savePayment(paymentData: PaymentInput!): User
+        saveRecipe(RecipeData: RecipeInput!): User
        
       }
     `;
