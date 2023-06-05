@@ -9,6 +9,14 @@ const recipeSchema = new Schema({
     type: Number,
     trim: true,
   },
+  recipeImage: {
+    type: Image,
+    required: true,
+  },
+  recipeDescription: {
+    type: String,
+    required: true,
+  },
 });
 
 const Recipe = model('Recipe', recipeSchema);

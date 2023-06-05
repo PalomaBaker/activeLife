@@ -26,7 +26,7 @@ type User {
       input RecipeInput {
         name: String! 
         calorieCount: Int! 
-        recipeImage: String!
+        recipeImage: Image!
         recipeDescription: [String]!
         recipeId: ID!
       }
