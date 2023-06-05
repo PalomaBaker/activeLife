@@ -1,0 +1,23 @@
+{
+  "name": "activelife",
+  "version": "1.0.0",
+  "description": "A fitness app that contains a nutrition, recipe, and workout generator to assist the user in creating and maintaining a healthy lifestyle",
+  "main": "server/server.js",
+  "scripts": {
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PalomaBaker/activeLife.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PalomaBaker/activeLife/issues"
+  },
+  "homepage": "https://github.com/PalomaBaker/activeLife#readme",
+  "devDependencies": {
+    "concurrently": "^8.1.0"
+  }
+}

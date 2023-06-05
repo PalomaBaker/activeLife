@@ -1,16 +1,18 @@
-const { Schema, model } = require('mongoose');
+const { Schema } = require('mongoose');
 
 const recipeSchema = new Schema({
   name: {
     type: String,
     required: true,
   },
-  calorieCount: {
+  calories: {
     type: Number,
     trim: true,
   },
+  image: {
+    type: String,
+    trim: true
+  }
 });
 
-const Recipe = model('Recipe', recipeSchema);
-
-module.exports = Recipe;
+module.exports = recipeSchema;
