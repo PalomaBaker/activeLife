@@ -6,8 +6,11 @@ export const QUERY_ME = gql`
       _id
       username
       email
-      savedPayment {
-       
+      savedRecipe {
+        name
+        calorieCount
+        recipeImage
+        recipeDescription
       }
     }
   }

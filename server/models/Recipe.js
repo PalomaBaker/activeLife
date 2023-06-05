@@ -10,8 +10,8 @@ const recipeSchema = new Schema({
     trim: true,
   },
   recipeImage: {
-    type: Image,
-    required: true,
+    type: String,
+   
   },
   recipeDescription: {
     type: String,

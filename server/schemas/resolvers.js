@@ -2,7 +2,7 @@ const { AuthenticationError } = require('apollo-server-express');
 const { User } = require('../models');
 const { signToken } = require('../utils/auth');
 
-const resolver = {
+const resolvers = {
     Query: {
         me: async (parent, args, context) => {
             if (context.user) {
@@ -37,8 +37,8 @@ const resolver = {
         },
         saveRecipe: async (parent, { recipeData }, context) => {
             if (context.user) {
-              const updatedUser = await User.findByIdAndUpdate(
-                { _id: context.user._id },
+              const updatedUser = await User.findOneAndUpdate(
+                { name: context.user.name },
                 { $push: { savedRecipes: recipeData } },
                 { new: true }
               );
@@ -51,7 +51,7 @@ const resolver = {
           removeRecipe: async (parent, { recipeId }, context) => {
             if (context.user) {
               const updatedUser = await User.findOneAndUpdate(
-                { _id: context.user._id },
+                { name: context.user.name },
                 { $pull: { savedRecipes: { recipeId } } },
                 { new: true }
               );

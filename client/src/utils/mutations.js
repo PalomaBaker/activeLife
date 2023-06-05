@@ -6,7 +6,9 @@ export const LOGIN_USER = gql`
       token
       user {
         _id 
-        username
+        email
+        password
+        recipes
       }
     }
   }
@@ -19,6 +21,8 @@ export const ADD_USER = gql`
       user {
         _id
         username
+        email
+        password
       }
     }
   }
@@ -35,7 +39,6 @@ mutation addRecipe($recipeData: RecipeInput!) {
         calorieCount
         recipeImage
         recipeDescription
-        recipeId
       }
 
     }
@@ -54,7 +57,6 @@ mutation removeRecipe($recipeData: RecipeInput!) {
         calorieCount
         recipeImage
         recipeDescription
-        recipeId
       }
 
     }
