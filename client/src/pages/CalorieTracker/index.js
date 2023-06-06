@@ -36,7 +36,7 @@ const CalorieTracker = () => {
         activitylevel: 'level_1'
       },
       headers: {
-        'X-RapidAPI-Key': 'e409a1e803msh766fbb1e9b121adp1bdf3cjsn6cf9edfecdb6',
+        'X-RapidAPI-Key': process.env.REACT_APP_APIKEY_TRACKER,
         'X-RapidAPI-Host': 'fitness-calculator.p.rapidapi.com'
       }
     };
