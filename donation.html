@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="donation.css".css>
+    <title>Document</title>
+</head>
+<body>
+    <form id="donation-container"  method="POST">
+    <div class="donation-box">
+        <div class="title">Donation Options</div>
+        <div class="form-clear">
+        <div class="userInput">
+            <input type="text" name="firstName" placeholder="First Name"> </input>
+            <input type="text" name="lastName" placeholder="Last Name"> </input>
+            <input type="text" name="email" placeholder="Email"> </input>
+        </div>
+        
+        <div class="amount">
+            <div class="donationBttn" id="donationAmount">$5</div>
+            <div class="donationBttn" id="donationAmount">$10</div>
+            <div class="donationBttn" id="donationAmount">$50</div>
+            <div class="donationBttn" id="donationAmount">$100</div>
+            <div class="donationBttn">$<input type="text" class="custom-amount" placeholder=""> </input></div>
+        </div>
+        <button type="submit" class="donate-button">Donate Now</button>
+    </div>
+    <p id="demo"></p>
+</div>
+    
+ 
+</form>
+   <script src="donation.js"></script>
+</body>
+</html>

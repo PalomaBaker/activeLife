@@ -1,0 +1,112 @@
+#donation-container{
+    height: min-content;
+    margin-top: 30px;
+   
+}
+.donation-box{
+   width: 500px;
+   height: 500px;
+   background-color: lightblue;
+   border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	
+} 
+
+.donation-box .title {
+    background-color: teal;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 25px;
+    width: 100%;
+    border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+
+}
+
+.donation-box .amount {
+	width: 30%;
+	display: block;
+	position: absolute;
+	margin-top: 50px;
+	right: 25px;
+    /* border-top-left-radius: 15px;
+	border-top-right-radius: 15px; */
+     border: solid 1px white;
+     border-radius: 15px;
+} 
+
+
+.donation-box .donationBttn {
+    background-color: rgb(7, 222, 222);
+    color: white;
+    width: 100%;
+    text-align: center;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	font-size: 18px;
+	position: relative;
+	
+}
+
+.donation-box .custom-amount{
+    width: 75%;
+    justify-content: center;
+}
+
+
+.donation-box .userInput{
+    width:55%;
+    display: block;
+    position: absolute;
+    top: 110px;
+    left: 25px;
+    
+}
+
+
+.donation-box .userInput input{
+    width: 90%;
+	font-size: 17px;
+	padding: 10px;
+	border-radius: 4px;
+	border-width: 0px;
+	color: #5C5C5C;
+    margin-bottom: 35px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.donation-box .donate-button{
+    width: 100%;
+    font-size: 20px;
+    background-color: teal ;
+    color: white;
+    bottom: 0px;
+	position: absolute;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-weight: 600;
+}
+
+
+
+.donation-box .amount .donationBttn:hover {
+	background-color: blue;
+}
+
+.donation-box .amount .donationBttn.selected {
+	background-color: blue;
+}
+
+#demo{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
