@@ -31,15 +31,15 @@ const CalorieTracker = () => {
 
     const options = {
       method: 'GET',
-      url: 'https://calorie-calculator.p.rapidapi.com/caloriecalculator.php',
+      url: 'https://fitness-calculator.p.rapidapi.com/dailycalorie',
       params: {
         age: age,
         height: userCentimeters,
         weight: userKilos
       },
       headers: {
-        'X-RapidAPI-Key': process.env.REACT_APP_APIKEY_TRACKER,
-        'X-RapidAPI-Host': 'calorie-calculator.p.rapidapi.com'
+        'X-RapidAPI-Key': 'e409a1e803msh766fbb1e9b121adp1bdf3cjsn6cf9edfecdb6',
+        'X-RapidAPI-Host': 'fitness-calculator.p.rapidapi.com'
       }
     };
 
