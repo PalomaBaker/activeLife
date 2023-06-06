@@ -4,7 +4,12 @@
   "description": "A fitness app that contains a nutrition, recipe, and workout generator to assist the user in creating and maintaining a healthy lifestyle",
   "main": "server/server.js",
   "scripts": {
-    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\""
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run install && npm run build --prefix client",
+    "server": "node server/server.js",
+    "start": "npm run server"
   },
   "repository": {
     "type": "git",
