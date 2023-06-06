@@ -5,13 +5,16 @@
     flex-wrap: wrap;
     justify-content: space-around;
     flex: 1 1 auto;
-    height: 50vh;
     width: 100%;
 }
 
 .form-card {
   margin: auto;
   margin-top: 50px;
+}
+
+.save-btn {
+    float: right;
 }
 
 

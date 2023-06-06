@@ -17,9 +17,10 @@ import Analysis from './pages/Analysis';
 import Recipes from './pages/Recipes';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
+import Dashboard from './pages/Dashboard';
 
 const httpLink = createHttpLink({
-  uri: 'graphql',
+  uri: 'http://localhost:3001/graphql',
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -66,6 +67,10 @@ function App() {
               <Route
                 path='/login'
                 element={<Login />}
+              />
+              <Route
+                path='/dashboard'
+                element={<Dashboard />}
               />
             </Routes>
         </Router>

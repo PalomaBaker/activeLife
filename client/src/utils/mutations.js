@@ -23,3 +23,18 @@ export const LOGIN_USER = gql`
     }
   }
 `;
+
+export const ADD_RECIPE = gql`
+  mutation addRecipe($recipeName: String!, $recipeCalories: Float!, $recipeImage: String!) {
+    addRecipe(recipeName: $recipeName, recipeCalories: $recipeCalories, recipeImage: $recipeImage) {
+      _id
+      email
+      username
+      recipes {
+        name
+        calories
+        image
+      }
+    }
+  }
+`

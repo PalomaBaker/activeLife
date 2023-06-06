@@ -10,7 +10,7 @@ const typeDefs = gql`
 
   type Recipe {
     name: String
-    calories: Int
+    calories: Float
     image: String
   }
 
@@ -28,6 +28,8 @@ const typeDefs = gql`
   type Mutation {
     createUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
+    addRecipe(recipeName: String!, recipeCalories: Float!, recipeImage: String!): User
+    deleteRecipe(name: String!): User
   }
 `;
 

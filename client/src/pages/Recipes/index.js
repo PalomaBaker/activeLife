@@ -1,10 +1,14 @@
 // Recipes HTML
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import RecipeForm from "../../components/RecipeForm";
 import axios from 'axios';
 import './recipes.css';
 
+import Auth from '../../utils/auth';
+import RecipeCard from "../../components/RecipeCard";
+
 const Recipes = () => {
+    const recipeRef = useRef(null);
     const [formData, setFormData] = useState([]);
 
     const handleForm = (values) => {
@@ -47,24 +51,20 @@ const Recipes = () => {
         <React.Fragment>
             <div id="content-wrapper">
                 <header className="recipe-header">
-                    <h2> Search Through Our Reciepe Database!</h2>
+                    <h2> Search Through Our Recipe Database!</h2>
                 </header>
                 <div className="w-full max-w-xs flex form-card">
                     <RecipeForm onSave={handleForm}/>
                 </div>
         
-                <div className="recipe-container" id="output">
+                <div className="recipe-container flex-auto" id="output">
                     {formData.map((data) =>{
+                        const recipeName = data.title;
+                        const recipeCalories = data.nutrition.nutrients[0].amount;
+                        const recipeImg = data.image;
+
                         return (
-                            <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
-                                <img className="w-full" src={data.image} alt="Food_image" />
-                                <div className="px-6 py-4">
-                                    <div className="font-bold text-xl mb-2">{data.title}</div>
-                                    <p className="text-gray-700 text-base">
-                                    Amount: {data.nutrition.nutrients[0].amount}
-                                    </p>
-                                </div>
-                            </div>
+                            <RecipeCard name={recipeName} calories={recipeCalories} image={recipeImg} />
                         )
                     })}
                 </div>

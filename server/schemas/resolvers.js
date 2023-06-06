@@ -5,7 +5,7 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
   Query: {
     users: async () => {
-      return User.find().populate('recipes');
+      return User.find();
     },
 
     user: async (parent, { username }) => {
@@ -13,7 +13,7 @@ const resolvers = {
     },
     me: async (parent, args, context) => {
       if (context.user) {
-        return User.findOne({ _id: context.user_id }).populate('recipes');
+        return User.findOne({ _id: context.user._id });
       }
       throw new AuthenticationError('You need to be logged in!');
     }
@@ -42,6 +42,26 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
+    addRecipe: async (parent, { recipeName, recipeCalories, recipeImage }, context) => {
+        const recipe = await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { recipes: {
+            name: recipeName,
+            calories: recipeCalories,
+            image: recipeImage
+          }} }
+        )
+
+        return recipe;
+    },
+    deleteRecipe: async (parent, { name }, context) => {
+      if (context.user) {
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $pull: { recipes: name } }
+        )
+      }
+    }
   },
 };
 

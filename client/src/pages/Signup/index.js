@@ -7,11 +7,6 @@ import { ADD_USER } from "../../utils/mutations";
 import Auth from '../../utils/auth';
 
 const Signup = () => {
-    const [formState, setFormState] = useState({
-        username: 'test',
-        email: 'test@example.com',
-        password: '1234512345',
-    });
     const [createUser, { error }] = useMutation(ADD_USER);
 
     const handleForm = async (values) => {
@@ -21,7 +16,7 @@ const Signup = () => {
         if (confirm_password === password) {
             try {
                 const { data } = await createUser({
-                    variables: { ...formState },
+                    variables: { username, email, password },
                 });
     
                 Auth.login(data.createUser.token);
