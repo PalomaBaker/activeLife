@@ -13,7 +13,7 @@ export const QUERY_USERS = gql`
       }
     }
   }
-`
+`;
 
 export const GET_ME = gql`
   query currentUser {

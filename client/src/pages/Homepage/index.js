@@ -34,6 +34,15 @@ const Homepage = () => {
                             </button>
                     </div>
                 </div>
+                <div className="box">
+                    <div className="content">
+                        <div className="title">Exercises</div>
+                            View exercises targeted towards specific body parts 
+                            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded page-btn" id="recipes">
+                                Exercises
+                            </button>
+                    </div>
+                </div>
             </div>
         </React.Fragment>
     )

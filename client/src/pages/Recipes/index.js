@@ -68,7 +68,6 @@ const Recipes = () => {
                         )
                     })}
                 </div>
-        
             </div>
         </React.Fragment>
     )

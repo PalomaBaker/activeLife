@@ -3,12 +3,14 @@ import React from "react";
 import './dashboard.css';
 
 import { useQuery } from "@apollo/client";
-import { GET_ME, QUERY_USERS } from "../../utils/queries";
+import { GET_ME } from "../../utils/queries";
 
 import RecipeCard from "../../components/RecipeCard";
 
 const Dashboard = () => {
     const { loading, data } = useQuery(GET_ME);
+    if (loading) {return 'Loading...'};
+    console.log(data);
     const recipes = data?.me.recipes;
 
     console.log(recipes);
