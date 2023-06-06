@@ -34,8 +34,10 @@ const CalorieTracker = () => {
       url: 'https://fitness-calculator.p.rapidapi.com/dailycalorie',
       params: {
         age: age,
+        gender: 'male',
         height: userCentimeters,
-        weight: userKilos
+        weight: userKilos,
+        activitylevel: 'level_1'
       },
       headers: {
         'X-RapidAPI-Key': 'e409a1e803msh766fbb1e9b121adp1bdf3cjsn6cf9edfecdb6',
@@ -50,10 +52,26 @@ const CalorieTracker = () => {
     try {
       const response = await axios.request(options);
       console.log(response.data);
+  
+      const { data } = response.data;
+      const maintainWeight = Math.round(data.goals['maintain weight']);
+      const gainHalfPound = Math.round(data.goals['Mild weight gain'].calory);
+      const gainOnePound = Math.round(data.goals['Weight gain'].calory);
+      const loseHalfPound = Math.round(data.goals['Mild weight loss'].calory);
+      const loseOnePound = Math.round(data.goals['Weight loss'].calory);
+  
+      document.getElementById('maintain').textContent = `You need a daily intake of ${maintainWeight} calories to maintain your weight.`;
+      document.getElementById('gainOne').textContent = `You need a daily intake of ${gainHalfPound} calories to gain half a pound per week.`;
+      document.getElementById('gainTwo').textContent = `You need a daily intake of ${gainOnePound} calories to gain a pound per week.`;
+      document.getElementById('loseOne').textContent = `You need a daily intake of ${loseHalfPound} calories to lose half a pound per week.`;
+      document.getElementById('loseTwo').textContent = `You need a daily intake of ${loseOnePound} calories to lose a pound per week.`;
+  
+      document.getElementById('results').classList.remove('calorie-hidden');
     } catch (error) {
       console.error(error);
     }
   };
+  
 
   return (
     <React.Fragment>
