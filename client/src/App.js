@@ -19,7 +19,6 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import Exercises from './pages/Exercise';
-import Donation from './pages/Donation';
 
 const httpLink = createHttpLink({
   uri: 'http://localhost:3001/graphql',
@@ -77,10 +76,6 @@ function App() {
               <Route
                 path='/exercise'
                 element={<Exercises />}
-              />
-              <Route
-                path='/donation'
-                element={<Donation />}
               />
             </Routes>
         </Router>
